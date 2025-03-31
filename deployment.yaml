@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pe-wa-deployment
+  name: onlineshop-deployment
 spec:
   replicas: 6  # Number of desired replicas
   selector:
     matchLabels:
-      app: pe-wa
+      app: onlineshop
   template:
     metadata:
       labels:
-        app: pe-wa
+        app: onlineshop
     spec:
       containers:
-      - name: pe-wa
-        image: yash5090/pe-wa:latest
+      - name: onlineshop
+        image: yash5090/onlineshop:latest
         ports:
-        - containerPort: 5000
+        - containerPort: 3000
